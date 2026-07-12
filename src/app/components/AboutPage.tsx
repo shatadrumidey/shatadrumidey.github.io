@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import profilePhoto from "../../imports/image-2.png";
+import profilePhoto from "../../../dp.png";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 const bg = "#050B14";
