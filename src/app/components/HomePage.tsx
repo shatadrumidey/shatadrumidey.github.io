@@ -1,12 +1,21 @@
 import { motion } from "motion/react";
 
-const STARS: [number, number][] = [
-  [8, 6], [14, 18], [22, 9], [31, 4], [38, 14], [45, 7],
-  [52, 19], [60, 5], [67, 12], [73, 3], [81, 16], [88, 8],
-  [93, 21], [19, 30], [35, 27], [57, 24], [77, 29], [90, 33],
-  [10, 38], [48, 35], [70, 40], [85, 22], [26, 42], [64, 44],
-  [6, 50], [42, 48], [79, 46],
-  [3, 12], [17, 5], [29, 22], [43, 11], [71, 8], [96, 16], [55, 32], [83, 41],
+// 6 glowing stars, evenly distributed across the sky
+const GLOW_STARS: [number, number][] = [
+  [11, 8],   // top-left
+  [38, 5],   // top-center-left
+  [62, 10],  // top-center-right
+  [84, 7],   // top-right
+  [24, 28],  // mid-left
+  [72, 22],  // mid-right
+];
+
+// Faint background stars — spread across the sky
+const FAINT_STARS: [number, number][] = [
+  [5, 4], [18, 14], [28, 7], [44, 18], [53, 3], [66, 16],
+  [78, 12], [92, 5], [96, 19], [3, 22], [15, 32], [33, 26],
+  [48, 31], [57, 38], [76, 35], [89, 28], [20, 42], [42, 44],
+  [64, 40], [82, 48], [9, 48], [50, 46], [95, 42],
 ];
 
 import { Link } from "react-router";
@@ -23,16 +32,28 @@ export function HomePage() {
         background: "linear-gradient(to bottom, #03080F 0%, #071018 45%, #0C1B28 68%, #0A1820 72%, #05111C 100%)",
       }} />
 
-      {/* Stars */}
-      {STARS.map(([x, y], i) => (
-        <div key={i} style={{
+      {/* Faint background stars */}
+      {FAINT_STARS.map(([x, y], i) => (
+        <div key={`f${i}`} style={{
           position: "absolute",
           left: `${x}%`, top: `${y}%`,
-          width: i % 9 === 0 ? 2 : 1,
-          height: i % 9 === 0 ? 2 : 1,
+          width: 1, height: 1,
           borderRadius: "50%",
           background: "white",
-          opacity: 0.14 + (i % 5) * 0.07,
+          opacity: 0.50 + (i % 4) * 0.08,
+        }} />
+      ))}
+
+      {/* Glowing stars */}
+      {GLOW_STARS.map(([x, y], i) => (
+        <div key={`g${i}`} style={{
+          position: "absolute",
+          left: `${x}%`, top: `${y}%`,
+          width: 2.5, height: 2.5,
+          borderRadius: "50%",
+          background: "white",
+          opacity: 0.92,
+    
         }} />
       ))}
 
