@@ -253,12 +253,12 @@ export function AboutPage() {
         <section>
           <h2 style={{
             fontFamily: "PaintBrushScript, serif",
-            fontSize: "1.25rem",
-            fontWeight: 600,
-            color: textMain,
-            letterSpacing: "0.02em",
-            margin: "0 0 36px 0",
-            opacity: 0.85,
+              fontSize: "2.8rem",
+              fontWeight: "normal",
+              color: textMain,
+              margin: "0 0 18px 0",
+              letterSpacing: "-0.01em",
+              lineHeight: 1.2,
           }}>
             Past Experience
           </h2>
