@@ -258,7 +258,6 @@ export function AboutPage() {
             color: textMain,
             letterSpacing: "0.02em",
             margin: "0 0 36px 0",
-            textTransform: "uppercase",
             opacity: 0.85,
           }}>
             Past Experience
