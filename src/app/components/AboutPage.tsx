@@ -29,7 +29,7 @@ const experiences = [
   {
     title: "Research Intern — Computer Vision in Healthcare",
     org: "IIT Kharagpur (Prof. Jiaul Hoque Paik)",
-    period: "April 2026 – Present",
+    period: "April 2026 – July 2026",
     bullets: [
       "Developing deep learning models for skin cancer detection on the Diverse Dermatology Images (DDI) dataset, targeting racial bias in dermatology AI that underperforms on darker Fitzpatrick Skin Tones (FST V–VI).",
       "Proposed YOLO26-LWN, a custom architecture replacing the C3k2 block with a novel C3k2_LWN block, achieving 79.4% ROC-AUC on dark skin tones — outperforming ResNet, EfficientNet, and standard YOLO variants.",
@@ -39,7 +39,7 @@ const experiences = [
   {
     title: "Research Intern | EEG-based Memory Reconstruction using ML",
     org: "EchoLab, University of Texas, Dallas",
-    period: "June 2026 - Present",
+    period: "July 2026 - Present",
     bullets: [
       "Developed modules for multimodal fusion of EEG features and structured memory descriptions for neural decoding.",
       "Investigating feature extraction pipelines for EEG and conditioning mechanisms for generative image/video reconstruction.",
@@ -252,7 +252,7 @@ export function AboutPage() {
         {/* Past Experience */}
         <section>
           <h2 style={{
-            fontFamily: "'Playfair Display', serif",
+            fontFamily: "PaintBrushScript, serif",
             fontSize: "1.25rem",
             fontWeight: 600,
             color: textMain,
